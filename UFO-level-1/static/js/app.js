@@ -22,10 +22,10 @@ function createTable (data) {
         })
     })
 }
-// Call the createTable function to display data in the HTML body.
+// Call the function to display data in the HTML 
 createTable(tableData);
 
-/* Create a function to filter the javascript file when the search date button is pressed */
+// Create a function to filter the javascript file when the search date button is pressed ; searching on the date/time values
 
 function searchTable () {
     var date = d3.select("#datetime").property("value");
@@ -35,5 +35,6 @@ function searchTable () {
     console.log(filterdata);
     createTable(filterdata);
 }
-// Call the function to run the filter when the search button is "clicked" by the user
+
+// Call the function to run the filter when the search button is clicked by the user
 d3.selectAll("#filter-btn").on("click", searchTable);
